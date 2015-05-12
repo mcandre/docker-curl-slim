@@ -1,10 +1,6 @@
-FROM scratch
-# FROM ubuntu:12.04
+FROM alpine
 MAINTAINER Andrew Pennebaker <andrew.pennebaker@gmail.com>
 
-ADD root.tgz /
+RUN apk add --update curl
 
-# RUN apt-get update
-# RUN apt-get install -y curl
-
-# ENTRYPOINT ["/usr/bin/curl", "-s"]
+ENTRYPOINT ["/usr/bin/curl", "-s"]

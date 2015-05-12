@@ -1,18 +1,23 @@
-# docker-curl-slim - a Docker container for curl
+# docker-curl-slim - a slim Docker container for curl
 
 # DOCKER HUB
 
 https://registry.hub.docker.com/u/mcandre/docker-curl-slim/
 
+# ABOUT
+
+docker-curl-slim is a container for downloading URLs with curl, made smaller with a few techniques:
+
+* Switch base image from [ubuntu](https://registry.hub.docker.com/_/ubuntu/) to [alpine](https://registry.hub.docker.com/_/alpine/).
+
 # EXAMPLE
 
 ```
 $ make
-docker build -t mcandre/docker-curl-slim .
-docker run --rm mcandre/docker-curl-slim http://icanhazip.com
-40.50.60.70
-docker run --rm mcandre/docker-curl-slim http://ron-swanson-quotes.herokuapp.com/quotes && echo ""
-{"quote":"Never half-ass two things. Whole-ass one thing."}
+docker run --rm mcandre/docker-curl-slim http://ron-swanson-quotes.herokuapp.com/quotes && echo ''
+{"quote":"You had me at meat tornado."}
+docker images | grep mcandre/docker-curl-slim | awk '{ print $(NF-1), $NF }'
+7.983 MB
 ```
 
 # REQUIREMENTS
