@@ -8,16 +8,16 @@ https://registry.hub.docker.com/u/mcandre/docker-curl-slim/
 
 docker-curl-slim is a container for downloading URLs with curl, made smaller with a few techniques:
 
-* Switch base image from [ubuntu](https://registry.hub.docker.com/_/ubuntu/) to [alpine](https://registry.hub.docker.com/_/alpine/).
+* Switch base image from [ubuntu](https://registry.hub.docker.com/_/ubuntu/) to [busybox](https://registry.hub.docker.com/u/progrium/busybox/).
 
 # EXAMPLE
 
 ```
 $ make
 docker run --rm mcandre/docker-curl-slim http://ron-swanson-quotes.herokuapp.com/quotes && echo ''
-{"quote":"You had me at meat tornado."}
+{"quote":"Breakfast food can serve many purposes."}
 docker images | grep mcandre/docker-curl-slim | awk '{ print $(NF-1), $NF }'
-7.983 MB
+5.393 MB
 ```
 
 # REQUIREMENTS

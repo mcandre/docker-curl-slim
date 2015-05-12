@@ -1,6 +1,6 @@
-FROM alpine
+FROM progrium/busybox
 MAINTAINER Andrew Pennebaker <andrew.pennebaker@gmail.com>
 
-RUN apk add --update curl
+RUN opkg-install curl
 
 ENTRYPOINT ["/usr/bin/curl", "-s"]
