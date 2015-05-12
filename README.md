@@ -8,7 +8,7 @@ https://registry.hub.docker.com/u/mcandre/docker-curl-slim/
 
 docker-curl-slim is a container for downloading URLs with curl, made smaller with a few techniques:
 
-* Switch base image from [ubuntu](https://registry.hub.docker.com/_/ubuntu/) to [busybox](https://registry.hub.docker.com/u/progrium/busybox/).
+* Switch base image from [ubuntu](https://registry.hub.docker.com/_/ubuntu/) to [progrium/busybox](https://registry.hub.docker.com/u/progrium/busybox/).
 
 # EXAMPLE
 
